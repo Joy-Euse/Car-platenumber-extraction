@@ -7,7 +7,7 @@ MIN_AREA = 600
 AR_MIN, AR_MAX = 2.0, 8.0
 def find_plate_candidates(frame):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    blur = cv2.Gaucv2.blurnBlur(gray, (5, 5), 0)
+    blur = cv2.GaussianBlur(gray, (5, 5), 0)
     edges = cv2.Canny(blur, 100, 200)
     contours, _ = cv2.findContours(
         edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
