@@ -56,7 +56,6 @@ def warp_plate(frame, rect):
     dst = np.array([
         [0, 0],
         [W_OUT - 1, 0],
-        23
         [W_OUT - 1, H_OUT - 1],
         [0, H_OUT - 1]
         ], dtype=np.float32)
